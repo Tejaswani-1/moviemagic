@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Confirmation - MovieMagic</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body class="min-h-screen flex flex-col">
+    <!-- Navigation -->
+    <nav class="navbar py-4 px-6 md:px-12 fixed w-full z-40">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="/" class="text-2xl font-bold glow-text">Movie<span class="text-purple-400">Magic</span></a>
+            <div class="hidden md:flex space-x-6">
+                <a href="/home" class="hover:text-purple-300 transition">Dashboard</a>
+                <a href="/logout" class="hover:text-purple-300 transition">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow pt-20 pb-12">
+        <div class="max-w-md mx-auto px-4 py-12">
+            <div class="card p-8 text-center">
+                <div class="w-20 h-20 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mb-4">Booking Confirmed!</h2>
+                <p class="text-gray-400 mb-8">Your tickets have been successfully booked</p>
+                
+                <div class="bg-gray-900 p-6 rounded-lg mb-8 text-left">
+                    <h3 class="text-lg font-semibold mb-4">Booking Details</h3>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-400">Movie:</span>
+                        <span class="font-medium">{{ booking.movie }}</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-400">Date:</span>
+                        <span class="font-medium">{{ booking.date }}</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-400">Time:</span>
+                        <span class="font-medium">{{ booking.time }}</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-400">Seat:</span>
+                        <span class="font-medium">{{ booking.seat }}</span>
+                    </div>
+                    <div class="flex justify-between mb-2">
+                        <span class="text-gray-400">Booking ID:</span>
+                        <span class="font-medium">{{ booking.id }}</span>
+                    </div>
+                </div>
+
+                <p class="text-gray-400 mb-6">A confirmation has been sent to your email</p>
+                <a href="/home" class="inline-block px-6 py-3 btn-primary rounded-lg font-medium">Back to Dashboard</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
