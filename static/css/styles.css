@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0f0c29;
+    background: -webkit-linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+    color: white;
+    min-height: 100vh;
+}
+
+.card {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(17, 25, 40, 0.75);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #6a11cb 0%, #2575fc 100%);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    transform: scale(1.02);
+    box-shadow: 0 5px 15px rgba(37, 117, 252, 0.4);
+}
+
+.navbar {
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(11, 15, 34, 0.75);
+}
+
+.movie-poster {
+    transition: all 0.3s ease;
+}
+
+.movie-poster:hover {
+    transform: scale(1.03);
+}
+
+.flash-message {
+    animation: slideIn 0.5s forwards, fadeOut 0.5s 2.5s forwards;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; visibility: hidden; }
+}
+
+.seat {
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.seat.selected {
+    background-color: #2575fc;
+    transform: scale(1.1);
+}
+
+.seat.booked {
+    background-color: #6b7280;
+    cursor: not-allowed;
+}
+
+.glow-text {
+    text-shadow: 0 0 10px rgba(106, 17, 203, 0.8), 0 0 20px rgba(37, 117, 252, 0.6);
+}
